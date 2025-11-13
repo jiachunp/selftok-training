@@ -1,0 +1,564 @@
+account: 'ywx1359914'
+
+obs:
+    bucket-6926:
+        create_app: "419811"
+        id: "********-****-****-****-************"
+    bucket-7769-huanan:
+        create_app: "ved_data"
+        id: "********-****-****-****-************"
+    bucket-1664-huadong:
+        create_app: "ved_data"
+        id: "********-****-****-****-************"
+    bucket-6824-huanan:
+        create_app: "automlzz"
+        id: "********-****-****-****-************"
+    bucket-distributed:
+        create_app: "automlzz"
+        id: "********-****-****-****-************"
+    bucket-east:
+        create_app: "automlzz-sc"
+        id: "********-****-****-****-************"
+    bucket-vedata02-bj4:
+        create_app: "com.huawei.ai.siye"
+        id: "********-****-****-****-************"
+    bucket-5125-guiyang:
+        create_app: "com.huawei.ai.siye"
+        id: "********-****-****-****-************"
+    bucket-9122-wulan:
+        create_app: "com.huawei.ai.siye"
+        id: "********-****-****-****-************"
+app:
+    "419811":
+        token: "443cdb51-067d-4905-9cee-c890be6a40b5"
+        vendor: "HEC"
+        bucket:
+            bucket-6926:
+                id: "7aa317b1-df41-4dd6-90cc-7bca729b7324"
+        pool:
+            cn-north-4:
+                specName: "pool-v100-automlzz"
+                poolType: "private"
+                poolUid: "9f13ff21-e6bb-4e52-be11-bfce72dee90f"
+                engineId: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                sharedPool: "yes"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+    com.huawei.ai.siye:
+        token: "46a61d1e-17b9-4344-a7e6-4639ef3c249b"
+        vendor: "HEC"
+
+    ved_data:
+        token: "bd43698f-f400-4f2a-8a09-a40238cb6607"
+        vendor: "HEC"
+
+    com.app.ved.huanan:
+        token: "a047af56-b8b9-45ef-9536-a0e461663e79"
+        vendor: "HEC"
+        bucket:
+            bucket-7769-huanan:
+                id: "4dbf945b-b6ef-4f1c-8099-61feab0e4112"
+        pool:
+            cn-south-1:
+                specName: "os-pool-reserve-r1-ved"
+                poolType: "private"
+                poolUid: "246c1607-7e1b-4d0d-831c-2d1931d04425"
+                engineId: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                sharedPool: "No"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+    automlzz:
+        token: "c383504d-abc4-4666-94a1-54b2928b61c9"
+        vendor: "HEC"
+        bucket:
+            bucket-1664-huadong:
+                id: "46ed783d-f5f4-4c75-8c2b-03accc7471da"
+            bucket-6824-huanan:
+                id: "227fbfce-f3e6-47ee-b28d-b22ff85a2145"
+            bucket-distributed:
+                id: "c2b15262-45af-4c8d-bf2a-7e9c3b1751ce"
+        pool:
+            cn-east-3:
+                specName: "os-pool04d2eb8a-e001"
+                poolType: "private"
+                poolUid: "467b5cc5-a5f2-4592-8467-2cbf18303912"
+                engineId: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                sharedPool: "yes"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+            cn-south-1:
+                specName: "os-pool-reserve-r1-ved"
+                poolType: "private"
+                poolUid: "246c1607-7e1b-4d0d-831c-2d1931d04425"
+                engineId: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                sharedPool: "no"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+            cn-north-1:
+                specName: "os-pool-train-8v100-automlzz1"
+                poolType: "private"
+                poolUid: "082d91b8-043a-43da-ad75-6b6835f3f743"
+                sharedPool: "no"
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+#                userImageUid: "dbe087d8-4cc0-42b4-9c32-f11ebea0b6e8" # pytorch18_cuda102_py37-ubuntu1804_x86_ofed55
+#                userImageVersionUid: "66901f82-d25b-473c-a756-085edc94635d" # 0.0.1
+                userImageUid: "20509b0b-3b57-4dad-9ea0-8ba0986a8452" # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                userImageVersionUid: "7d06341a-41da-4a1c-8ffc-b8c2be53c85b" # 0.0.4
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+                environments:
+                    "CONDA_DEFAULT_ENV": "MGM_py310"
+                    "DEFAULT_CONDA_ENV_NAME": "MGM_py310"
+                    "ENV_NAME": "MGM_py310"
+
+    aigc.team.two:
+        token: "7eae5dbe-0404-48ad-9504-5149515eee9b"
+        vendor: "HEC"
+        bucket:
+            bucket-6824-huanan:
+                id: "1e448d0e-290e-4255-872a-feadf8952ebd"
+            bucket-distributed:
+                id: "8180332a-2cc9-4f8e-9928-b89e506b8563"
+        pool:
+            cn-north-1:
+                specName: "os-pool-train-8v100-automlzz1"
+                poolType: "private"
+                poolUid: "3e1ad8bb-8c63-45c3-914a-1a9906becfa7"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+#                userImageUid: "dbe087d8-4cc0-42b4-9c32-f11ebea0b6e8" # pytorch18_cuda102_py37-ubuntu1804_x86_ofed55
+#                userImageVersionUid: "66901f82-d25b-473c-a756-085edc94635d" # 0.0.1
+                userImageUid: "20509b0b-3b57-4dad-9ea0-8ba0986a8452" # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                userImageVersionUid: "7d06341a-41da-4a1c-8ffc-b8c2be53c85b" # 0.0.4
+                nasSharAddr: 10.155.173.21:/
+                nasMountPath: /cache/outputs/nas/
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+                environments:
+                    "CONDA_DEFAULT_ENV": "MGM_py310"
+                    "DEFAULT_CONDA_ENV_NAME": "MGM_py310"
+                    "ENV_NAME": "MGM_py310"
+                    "MA_MEMARTS_LOG_LEVEL": "FATAL"
+            cn-south-1:
+                specName: "os-pool-roma-v100-media"
+                poolType: "private"
+                poolUid: "cff1e5b8-6742-4e97-b509-9019d6bd17ec"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+                userImageUid: "bdcadc8c-ac6a-4865-9562-1902058c8d16"  # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                userImageVersionUid: "335b2f20-81a7-499e-ab29-49e933528f77" # 0.0.2
+                nasSharAddr: 10.155.110.117:/
+                nasMountPath: /cache/outputs/nas/
+                environments:
+                    "CONDA_DEFAULT_ENV": "MGM_py310"
+                    "DEFAULT_CONDA_ENV_NAME": "MGM_py310"
+                    "ENV_NAME": "MGM_py310"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+    aigc.team.five:
+        token: "84ee576d-d47e-4db5-83c2-02e97028bf98"
+        vendor: "HEC"
+        bucket:
+            bucket-distributed:
+                id: "c44d3c43-dd05-4d8a-b876-a313a4b3c0fe"
+            bucket-6824-huanan:
+                id: "bfa4f40c-dcda-48d4-afd4-96cda45f0376"
+        pool:
+            cn-north-1:
+                specName: "os-pool-train-8v100-automlzz1"
+                poolType: "private"
+                poolUid: "df565fab-ab25-42bd-ae50-51d8b117aa91"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+#                userImageUid: "dbe087d8-4cc0-42b4-9c32-f11ebea0b6e8" # pytorch18_cuda102_py37-ubuntu1804_x86_ofed55
+#                userImageVersionUid: "66901f82-d25b-473c-a756-085edc94635d" # 0.0.1
+                userImageUid: "20509b0b-3b57-4dad-9ea0-8ba0986a8452" # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                userImageVersionUid: "7d06341a-41da-4a1c-8ffc-b8c2be53c85b" # 0.0.4
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+                environments:
+                    "USE_MEMARTS": "1"
+                    "CONDA_DEFAULT_ENV": "MGM_py310"
+                    "DEFAULT_CONDA_ENV_NAME": "MGM_py310"
+                    "ENV_NAME": "MGM_py310"
+            cn-south-1:
+                specName: "os-pool-reserve-r1-ved"
+                poolType: "private"
+                poolUid: "57a9d118-9834-49c4-af1e-5c3be091f7f9"
+                engineId: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                sharedPool: "yes"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+
+    aigc.team.six:
+        token: "cb2cc662-4f44-4975-a55b-dc591e82fc33"
+        vendor: "HEC"
+        bucket:
+            bucket-6824-huanan:
+                id: "6a9819f4-383d-45b9-a0f1-18ed8678ae92"
+            bucket-9122-wulan:
+                id: "d6277457-a16f-46f0-b6d2-b372fa23df46"
+            bucket-5125-guiyang:
+                id: "cac45441-3903-444b-a25b-9438561c1353"
+        pool:
+            cn-south-1:
+                specName: "os-pool-roma-v100-media"
+                poolType: "private"
+                poolUid: "d1893fe5-2b2f-4a3e-b655-f031aca6b92a"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+                userImageUid: "bdcadc8c-ac6a-4865-9562-1902058c8d16"  # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                userImageVersionUid: "335b2f20-81a7-499e-ab29-49e933528f77" # 0.0.2
+                nasSharAddr: 10.155.110.117:/
+                nasMountPath: /cache/outputs/nas/
+                environments:
+                    "CONDA_DEFAULT_ENV": "MGM_py310"
+                    "DEFAULT_CONDA_ENV_NAME": "MGM_py310"
+                    "ENV_NAME": "MGM_py310"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+            cn-north-9:
+                poolType: "private"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+              
+                # specName: "roma-train-a800-p7vn-video"
+                # poolUid: "c8594f7e-1fd2-4264-b951-72a06c44cd0d"
+                # engineName: "PyTorch" 
+                # engineVersion: "【A芯片专用】pytorch_1.10.2-cuda_11.3-py_3.7-ubuntu_18.04-x86_64" 
+                # userImageUid: "9f92b6dc-88b1-44f1-8fb7-66083591be08"  # pytorch2.0-cuda11.7-py3.10-ubuntu18.04_ofed5.5
+                # userImageVersionUid: "b42da734-3a8e-4f7a-ac5d-f1199bf5691e" # 0.0.2
+                # environments:
+                #     CONDA_DEFAULT_ENV: "MGM_py310"
+                #     DEFAULT_CONDA_ENV_NAME: "MGM_py310"
+                #     ENV_NAME: "MGM_py310"
+
+                specName: "os-cn9-313t-c004-siye-mkttmp"
+                poolUid: "f960de76-d5a1-46ab-9c5a-ce75c65be065"
+                # specName: "os-cn9-313t-c004-tmpmkt-zsiye"
+                # poolUid: "bc5c85e0-3235-4e90-9674-75b6932de5a5"
+                engineName: "Ascend-Powered-Engine"
+                engineVersion: "mindspore_1.10.0-cann_6.0.1-py_3.7-euler_2.8.3-aarch64" 
+                
+
+                userImageUid: "ba72a43e-7147-4bb1-b269-6919aae69851"
+                userImageVersionUid: "336a4dc3-7a98-4084-98be-a463062cff05" # py38
+                # nasSharAddr: 10.155.110.117:/
+                # nasMountPath: /cache/outputs/nas/
+                environments:
+                    "CONDA_DEFAULT_ENV": "py38_torch21"
+                    "DEFAULT_CONDA_ENV_NAME": "py38_torch21"
+                    "ENV_NAME": "py38_torch21"
+
+                nas:
+                    - nas_type: nfs
+                      nas_shar_addr: "4ff4c6b2-19bf-42dd-9071-d3c37e4944e3.c4ba1f0d-0ffb-4a10-b283-b4d4dc66559f.sfsturbo.internal:/"
+                      nas_mount_path: "/mnt/sfs_turbo/"
+                      read_only: False
+
+                
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+            cn-southwest-2:
+                poolType: "private"
+                #poolUid: "e79692a1-b2e6-4ae2-a8ed-4b4fc4137766"
+                specName: "os-pool-cn2-376t-tmpmkt-siye"
+                poolUid: "b0c26698-af77-4758-9ae6-defd7dcdd1aa"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineName: "Ascend-Powered-Engine"
+                engineRunUser: "1000"
+                engineVersion: "mindspore_1.7.0-cann_5.1.0-py_3.7-euler_2.8.3-aarch64" # 暂时没有A+P镜像，借用MS启动命令，无影响
+                #engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+                userImageUid: "d2aa2578-9d09-4216-b836-de4304351a11"  # py37_t800_b050_pta_b055
+                userImageVersionUid: "5a7aa18d-0bb4-45e5-a46c-04d26f3f6e07" # 0.0.2
+                # userImageUid: "8cb8bac2-388e-42c8-941f-6e45f5961861"        # py310_t800_b050_pta_b055
+                # userImageVersionUid: "d67b5b48-db5d-4307-b791-aa9930679173"
+                # userImageUid: "fd184418-41ab-4932-afea-ccabca97af32" # conv3d
+                # userImageVersionUid: "7b156140-0739-48e4-86f6-ad3410e3f31b"
+                # userImageUid: "813e0d94-74da-4e24-86c2-c2439da0efc8"   # torc21_py38
+                # userImageVersionUid: "4f5cfd90-8887-4f92-b3a9-59af564c67af"
+                #userImageUid: "5fcb0729-1544-4532-b9eb-66b1f4f4f5bb"  #py38_b070
+                #userImageVersionUid: "b91afdc7-04f7-4ca6-8ac7-7e7fad0d6189"
+
+                nas:
+                    - nas_type: nfs
+                      nas_shar_addr: "a93ea143-4df4-4d36-95fa-689ca3768fae.1b24eabc-3b2f-4f33-88f9-114fe3001fcc.sfsturbo.internal:/"
+                      nas_mount_path: "/mnt/sfs_turbo/"
+                      read_only: False
+                # environments:
+                #     "CONDA_DEFAULT_ENV": "py38_torch21"
+                #     "DEFAULT_CONDA_ENV_NAME": "py38_torch21"
+                #     "ENV_NAME": "py38_torch21"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+
+            
+    aigc.team.two.edit:
+        token: "5a0c5914-13f6-45b2-8cd2-3ce4618605a9"
+        vendor: "HEC"
+        bucket:
+            bucket-5125-guiyang:
+                id: "dc6bf7b4-5073-459f-bbc3-d630b99e8a7d"
+        pool:
+            cn-southwest-2:
+                poolType: "private"
+                sharedPool: "yes"
+                algoType: "selfdefined"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+              
+
+                specName: "os-roma-d910b-c006-siye"
+                poolUid: "4256d1d5-8ee3-4ba6-ae0c-7d1fe53eb651"
+        
+                engineName: "Ascend-Powered-Engine"
+                engineVersion: "mindspore_1.10.0-cann_6.0.1-py_3.7-euler_2.8.3-aarch64" 
+                userImageUid: "813e0d94-74da-4e24-86c2-c2439da0efc8"
+                userImageVersionUid: "522935a4-e68d-438a-8cf3-fbe791e1ce68" # py38
+
+                environments:
+                    "CONDA_DEFAULT_ENV": "py38_torch21"
+                    "DEFAULT_CONDA_ENV_NAME": "py38_torch21"
+                    "ENV_NAME": "py38_torch21"
+
+                nas:
+                    - nas_type: nfs
+                      nas_shar_addr: "2b7adc8b-4ada-4e5e-b999-b5891708926b.5f0ff891-bcb2-4f14-ad97-97310b398bc4.sfsturbo.internal:/"
+                      nas_mount_path: "/mnt/sfs_turbo/"
+                      read_only: False
+
+                
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+
+
+
+    automlzz-sc:
+        token: "fa4c0214-3828-4020-bef4-b28572e14638"
+        vendor: "HEC"
+        bucket:
+            bucket-east:
+                id: '15ab823b-0667-45d6-8225-deebd988f9ea'
+        pool:
+            cn-east-3:
+                specName: "os-pool04d2eb8a-e001"
+                poolType: "private"
+                poolUid: "cb1d4a61-01aa-43ab-94ec-11001d2e635a"
+                sharedPool: "yes"
+                nasSharAddr: 10.155.197.151:/
+                nasMountPath: /cache/outputs/nas/
+                algoType: "selfdefined"
+                engineName: "PyTorch"
+                engineVersion: "pytorch_1.8.0-cuda_10.2-py_3.7-ubuntu_18.04-x86_64"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                selfDefinedCommandType: "presetCommand"
+                userImageUid: "3d917a50-c167-4999-ac98-418abd6cb608" # pytorch2.0-cuda11.7-py3.10-ubuntu18.04
+                userImageVersionUid: "30c9c57b-edf0-45c5-9d2e-1321157f88b6" # 0.0.11
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+                environments:
+                    CONDA_DEFAULT_ENV: "MGM_py310"
+                    DEFAULT_CONDA_ENV_NAME: "MGM_py310"
+                    ENV_NAME: "MGM_py310"
+
+    ved_reid_id_huanan_qw:
+        token: "b3c3d1dd-ca94-4749-9444-4c5b1fd849f9"
+        vendor: "HEC"
+        bucket:
+            bucket-vedata02-bj4:
+                id: "e996a27f-9fdb-42a7-af06-78c181a64b28"
+            bucket-5125-guiyang:
+                id: "f03763e9-f9fb-4d68-a649-867573aad108"
+            bucket-9122-wulan:
+                id: "95937061-0a0f-4a1b-9cdd-ece5344cb519"
+            bucket-6824-huanan:
+                id: '08d011e9-a965-4c1f-8859-339836c0133e'
+        pool:
+            cn-south-1:
+                specName: "os-cns1-280t-c001-automlzz"
+                poolType: "private"
+                poolUid: "4f82c15b-65b8-4152-a361-ff50eb579f49"
+                sharedPool: "yes"
+                flavorCode:
+                    "1": "modelarts.pool.visual.xlarge"
+                    "8": "modelarts.pool.visual.8xlarge"
+
+                # for custom image common setup
+                algoType: "selfdefined"
+                engineName: "Ascend-Powered-Engine"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                engineVersion: "mindspore_1.7.0-cann_5.1.0-py_3.7-ubuntu_18.04-x86_64"
+                selfDefinedCommandType: "presetCommand"
+                # nasSharAddr: 10.155.170.215:/
+                # nasMountPath: /cache/outputs/nas/
+                # pytorch1.11的630商用分支+torch1.11版本镜像
+                userImageUid: "b8735c09-833f-4c4f-9cff-6265546f50f4"
+                userImageVersionName: "0.0.1"
+                userImageVersionUid: "fffaa1c9-4681-413b-84cf-703d58ef5f21"
+                #environments: { "MA_DETECT_TRAIN_INJECT_CODE": "0" }
+
+            cn-north-4:
+                specName: "os-pool-arm-network-media-siye"
+                poolType: "private"
+                poolUid: "abf067a5-a2c6-443f-814b-b6e9e32fe403"
+                sharedPool: "yes"
+                flavorCode:
+                    "8": "modelarts.pool.visual.8xlarge"
+
+                # for custom image common setup
+                algoType: "selfdefined"
+                engineName: "Ascend-Powered-Engine"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                engineVersion: "pytorch_1.11.0-cann_6.3.0-py_3.7-euler_2.8.3-aarch64"
+                selfDefinedCommandType: "presetCommand"
+                nasSharAddr: 10.155.170.215:/
+                nasMountPath: /cache/outputs/nas/
+                # pytorch1.11的630商用分支+torch1.11版本镜像
+                userImageUid: "d60bbd1e-ff73-49ab-b9b4-966fe14caadc"
+                userImageVersionName: "0.0.2"
+                userImageVersionUid: "c5c9b742-584b-4801-ae3f-70de17acd799"
+                environments: { "MA_DETECT_TRAIN_INJECT_CODE": "0" }
+
+            cn-north-9:
+                #specName: "os-pool-cn9-280t-tmpmkt-siye"
+                specName: "os-cn9-910b-313t-test0305"
+                poolType: "private"
+                poolUid: "4663f10a-98b4-4222-a416-b71a250bbcec"   # wulan  os-pool-cn9-280t-tmpmkt-siye
+                engineId: "mindspore_1.7.0-cann_5.1.0-py_3.7-euler_2.8.3-aarch64"
+                sharedPool: "yes"
+                flavorCode:
+                    "8": "modelarts.pool.visual.8xlarge"
+                # for custom image common setup
+                algoType: "selfdefined"
+                engineName: "Ascend-Powered-Engine"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                engineVersion: "mindspore_1.7.0-cann_5.1.0-py_3.7-euler_2.8.3-aarch64"
+                selfDefinedCommandType: "presetCommand"
+                environments:
+                    "CONDA_DEFAULT_ENV": "py38_torch21"
+                    "DEFAULT_CONDA_ENV_NAME": "py38_torch21"
+                    "ENV_NAME": "py38_torch21"
+
+                nas:
+                    - nas_type: nfs
+                      nas_shar_addr: "4ff4c6b2-19bf-42dd-9071-d3c37e4944e3.c4ba1f0d-0ffb-4a10-b283-b4d4dc66559f.sfsturbo.internal:/"
+                      nas_mount_path: "/mnt/sfs_turbo/"
+                      read_only: False
+                #################
+                #################
+                #################
+                # annotations:
+                #     faultToleranceJobRetryNum: 0
+                #     faultToleranceJobUnconditionalRetry: False
+                #     memartsEnable: False
+
+                # nasSharAddr: 10.170.27.50:/
+                # nasMountPath: /cache/outputs/nas/
+                #                # pytorch_1_11_0-cann_6_3_rc2_d910b_aigc_deepspeed, v0.0.2
+                #                userImageUid: "97d069d5-8b0e-452d-a3ea-eef64ee788d5"
+                #                userImageVersionUid: "4047c0cf-f034-447b-9ad3-1593737b0078"
+                # pytorch_1_11_0-cann_6_3_rc2_d910b_aigc, v0.0.1
+                # userImageUid: "5de10951-a278-469c-9672-8bd126225e9b"        # py37_torch11_canb120_pta080
+                # userImageVersionUid: "3a3dffa0-e4d0-4b76-b84e-703e25e5f5ed"
+                
+                userImageUid: "ba72a43e-7147-4bb1-b269-6919aae69851"
+                userImageVersionUid: "848413b9-aea2-4c78-bf7b-ea969c8963f6"
+
+
+            cn-southwest-2:
+                specName: "os-roma-d910b-siye-aigc-pool"  # 910B2
+                poolUid: "74309c3c-e420-4c92-8f72-4a009eee74b7"  # 910B2
+
+                # specName: "os-roma-d910b-c004-siye"  # 910B4
+                # poolUid: "53e9c357-0b19-4572-8ee2-59e16560173a"  # 910B4
+#                specName: "os-roma-d910b-c006-siye"  # 910B4
+#                poolUid: "e0ca6c9e-6c83-457b-b6fe-0c2aabc08ff9"  # 910B4
+#                specName: "os-roma-train-910b-c008-media"  # 910B4
+#                poolUid: "21e7ccad-ae87-47d7-9e9d-a57eaaff8b31"  # 910B4
+                poolType: "private"
+                engineId: "mindspore_1.7.0-cann_5.1.0-py_3.7-euler_2.8.3-aarch64"
+                sharedPool: "yes"
+                flavorCode:
+                    "8": "modelarts.pool.visual.8xlarge"
+                # for custom image common setup
+                algoType: "selfdefined"
+                engineName: "Ascend-Powered-Engine"
+                engineRunUser: "1000"
+                engineScriptInterpreter: ""
+                engineVersion: "仅供自定义镜像-预置命令选用" # 暂时没有A+P镜像，借用MS启动命令，无影响
+                selfDefinedCommandType: "presetCommand"
+#                nasSharAddr: 10.170.27.50:/
+#                nasMountPath: /cache/outputs/nas/
+                nas:
+                    - nas_type: nfs
+                      nas_shar_addr: "10.170.27.50:/"
+                      nas_mount_path: "/cache/outputs/nas/"
+                      read_only: False
+                    - nas_type: nfs
+                      nas_shar_addr: "a93ea143-4df4-4d36-95fa-689ca3768fae.1b24eabc-3b2f-4f33-88f9-114fe3001fcc.sfsturbo.internal:/"
+                      nas_mount_path: "/mnt/sfs_turbo/"
+                      read_only: False
+                # userImageUid: "d2aa2578-9d09-4216-b836-de4304351a11"      # python_3_7_10_d910b_aigc, 0.0.2, 预装了1017 commercial
+                # userImageVersionUid: "8b4f531e-1bc8-4363-9944-c91dfbbb0755"
+                userImageUid: "813e0d94-74da-4e24-86c2-c2439da0efc8"        # 
+                userImageVersionUid: "6a35ae0d-8e98-4e7c-b119-7ff0c546be49"
+                environments:
+                    "CONDA_DEFAULT_ENV": "py38_torch21"
+                    "DEFAULT_CONDA_ENV_NAME": "py38_torch21"
+                    "ENV_NAME": "py38_torch21"

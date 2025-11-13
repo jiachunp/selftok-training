@@ -1,0 +1,15 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: DEEPSPEED
+deepspeed_config:
+ zero3_init_flag: false
+ deepspeed_multinode_launcher: standard
+ deepspeed_config_file: 'configs/deepspeed/over_commu.json'
+fsdp_config: {}
+main_process_port: 29501
+main_training_function: main
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
