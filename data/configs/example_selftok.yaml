@@ -1,0 +1,65 @@
+selftok_t2i:
+  dataset_names:
+  - blip3o_small
+  - imagenet_long_caption
+  - imagenet_short_caption
+  - blip3o_short_caption
+  - blip3o_long_caption
+  image_transform_args:
+    image_stride: 16
+    max_image_size: 1024
+    min_image_size: 512
+  is_mandatory: true
+  num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
+  - 66
+  - 621
+  - 621
+  - 3666
+  - 2891
+  weight: 1
+
+
+# selftok_t2i:
+#   dataset_names:
+#   - blip3o_long_caption
+#   - blip3o_short_caption
+#   - imagenet_long_caption
+#   - imagenet_short_caption
+#   image_transform_args:
+#     image_stride: 16
+#     max_image_size: 1024
+#     min_image_size: 512
+#   is_mandatory: true
+#   num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
+#   - 2891
+#   - 1833
+#   - 207
+#   - 207
+#   weight: 1
+
+
+# selftok_t2i:
+#   dataset_names:
+#   - blip3o_long_caption
+#   image_transform_args:
+#     image_stride: 16
+#     max_image_size: 1024
+#     min_image_size: 512
+#   is_mandatory: true
+#   num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
+#   - 2891
+#   weight: 1
+
+
+# selftok_t2i:
+#   dataset_names:
+#   - selftok_t2i
+#   image_transform_args:
+#     image_stride: 16
+#     max_image_size: 1024
+#     min_image_size: 512
+#   is_mandatory: true
+#   num_used_data: # The sum should be larger that NUM_GPUS x NUM_WORKERS
+#   - 2891
+#   weight: 1
+  

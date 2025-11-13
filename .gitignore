@@ -1,0 +1,63 @@
+# ---- Python basics ----
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+.python-version
+
+# ---- Build & packaging ----
+build/
+dist/
+*.egg-info/
+
+# ---- Editors/OS ----
+.vscode/
+.idea/
+.DS_Store
+
+# ---- Testing & typing ----
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---- Logs & runs ----
+*.log
+logs/
+lightning_logs/
+wandb/
+mlruns/
+
+# ---- Caches ----
+.cache/
+cache/
+
+# ---- Data & results (customize as needed) ----
+dataset/
+outputs/
+results/
+checkpoints/
+ckpt/
+
+
+# ---- Big binary artifacts (don’t version control) ----
+**/*.pth
+**/*.pt
+**/*.ckpt
+**/*.bin
+**/*.safetensors
+**/*.onnx
+**/*.tflite
+
+# If these are large/generated, ignore them; remove if you need them in git
+**/*.npy
+**/*.npz
+**/*.parquet
+
+# ---- Others you might not need ----
+*.tmp
+*.swp
