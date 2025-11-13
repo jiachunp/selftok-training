@@ -1,0 +1,17 @@
+{
+    "gradient_accumulation_steps": 1,
+    "gradient_clipping": 1.0,
+    "train_batch_size": "auto", 
+    "train_micro_batch_size_per_gpu": "auto",
+    "zero_optimization": {
+        "stage": 2,
+        "offload_optimizer":{
+            "device": "none"
+        },
+        "offload_param": {
+            "device": "none"
+        },        
+        "overlap_comm": true,
+        "stage3_gather_16bit_weights_on_model_save": false
+    }
+}
